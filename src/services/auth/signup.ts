@@ -5,7 +5,7 @@ import { PasswordEncrypter } from "../../utils/crypt";
 const uuidv1 = require("uuidv1");
 
 export class SignUp {
-    public async Register(firstname: string, lastname: string, cid: string, username: string, password: string, role: number ): Promise<User | null> {
+    public async Register(firstname: string, lastname: string, cid: string, username: string, password: string, role: number, phonenumber?: string ): Promise<User | null> {
         const passwordEncrypter: PasswordEncrypter = new PasswordEncrypter();
 
         try {
@@ -16,6 +16,7 @@ export class SignUp {
                 cid: cid,
                 username: username,
                 password: await passwordEncrypter.EncryptPassword(password),
+                phonenumber: phonenumber ? phonenumber: null,
                 role: role
             });
 

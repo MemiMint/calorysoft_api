@@ -3,6 +3,7 @@ import { UpdatePatient } from "./update-patient";
 import { DeletePatient } from "./delete-patient";
 import { CreatePatient } from "./create";
 import { GetPatientByID } from "./patient-by-id";
+import { LastPatient } from "./last";
 
 export class PatientService {
     public GetPatients: GetPatients;
@@ -10,6 +11,7 @@ export class PatientService {
     public CreatePatient: CreatePatient;
     public DeletePatient: DeletePatient;
     public UpdatePatient: UpdatePatient;
+    public LastPatient: LastPatient;
 
     constructor() {
         this.GetPatients = new GetPatients();
@@ -17,5 +19,6 @@ export class PatientService {
         this.CreatePatient = new CreatePatient();
         this.DeletePatient = new DeletePatient();
         this.UpdatePatient = new UpdatePatient();
+        this.LastPatient = new LastPatient();
     }
 }

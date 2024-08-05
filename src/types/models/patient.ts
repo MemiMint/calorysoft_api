@@ -3,10 +3,11 @@ export type Patient = {
     firstname: string;
     lastname: string;
     sex: string;
-    age: string;
-    height: string;
+    age: number;
+    height: number;
     physical_activity: number;
-    weight: string;
+    phonenumber: string;
+    weight: number;
     np_id: number;
     email: string;
     notes: string;

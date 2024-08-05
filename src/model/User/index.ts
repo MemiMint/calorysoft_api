@@ -9,6 +9,7 @@ export class UserModel extends Model {
     declare cid: string;
     declare username: string;
     declare password: string;
+    declare phonenumber: string;
     declare role: number;
 };
 
@@ -27,6 +28,10 @@ UserModel.init({
     cid: DataTypes.STRING,
     username: DataTypes.STRING,
     password: DataTypes.STRING,
+    phonenumber: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     role: DataTypes.NUMBER
 }, { sequelize, modelName: "user", tableName: "users" });
 

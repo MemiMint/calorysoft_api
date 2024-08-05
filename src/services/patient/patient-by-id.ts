@@ -1,4 +1,4 @@
-import { Patient } from "types/models/patient";
+import { Patient } from "../../types/models/patient";
 import { PatientModel } from "../../model/Patient";
 
 export class GetPatientByID {

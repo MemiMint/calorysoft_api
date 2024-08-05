@@ -6,12 +6,13 @@ export class PatientModel extends Model {
     declare firstname: string;
     declare lastname: string;
     declare sex: string;
-    declare age: string;
-    declare height: string;
+    declare age: number;
+    declare height: number;
     declare physical_activity: number;
-    declare weight: string;
+    declare weight: number;
     declare np_id: number;
     declare email: string;
+    declare phonenumber: string;
     declare notes: string;
 }
 
@@ -21,15 +22,16 @@ PatientModel.init({
         primaryKey: true,
         autoIncrement: true
     },
-    name: DataTypes.STRING,
+    firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     sex: DataTypes.CHAR,
     age: DataTypes.INTEGER,
     height: DataTypes.INTEGER,
-    physical_Activty: DataTypes.FLOAT,
+    physical_activity: DataTypes.FLOAT,
     weight: DataTypes.INTEGER,
     np_id: DataTypes.INTEGER,
     email: DataTypes.STRING,
+    phonenumber: DataTypes.STRING,
     notes: DataTypes.TEXT
 }, { sequelize, modelName: "patient", tableName: "patients" });
 
