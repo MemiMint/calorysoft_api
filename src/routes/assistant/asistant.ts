@@ -11,6 +11,6 @@ export class AssistantRoute {
     }
 
     public Init() {
-        this._app.get("/assistant/:id", this.controller.Exec);
+        this._app.get("/assistant/:uid", this.controller.Exec);
     }
 }

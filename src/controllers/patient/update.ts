@@ -10,7 +10,19 @@ export class UpdatePatientController implements IController<CreatePatientRespons
         const service: PatientService = new PatientService();
 
         try {
-            const newPatient = await service.UpdatePatient.update(req.params.id, req.body);
+            const newPatient = await service.UpdatePatient.update(req.params.id, {
+                firstname: req.body.firstname,
+                age: req.body.age,
+                email: req.body.email,
+                height: req.body.height,
+                lastname: req.body.lastname,
+                notes: req.body.notes,
+                np_id: req.body.np_id,
+                phonenumber: req.body.phonenumber,
+                physical_activity: req.body.physical_activity,
+                sex: req.body.sex,
+                weight: req.body.weight
+            });
 
             if (!newPatient) {
                 return res.status(StatusCodes.NO_CONTENT);

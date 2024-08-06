@@ -11,6 +11,10 @@ import { DeleteAssistantRoute } from "./assistant/delete";
 import { UpdateAssistantRoute } from "./assistant/update";
 import { DashboardRoute } from "./dashboard/dashboard";
 import { CreateNutritionalPlanRoute, DeleteNutritionalPlanRoute, GetNutritionalPlanRoute, GetNutritionalPlansRoute, UpdateNutritionalPlanRoute } from "./nutritional-plans";
+import { SearchAssistannt } from "services/assistants/search";
+import { SearchAssistantRoute } from "./assistant/search";
+import { SearchPatientsRoute } from "./patient/seatch";
+import { SearchNutritionalPlansRoute } from "./nutritional-plans/search";
 
 
 export class RouterHandler {
@@ -41,7 +45,10 @@ export class RouterHandler {
             new DeleteNutritionalPlanRoute(app),
             new GetNutritionalPlansRoute(app),
             new GetNutritionalPlanRoute(app),
-            new DashboardRoute(app)
+            new DashboardRoute(app),
+            new SearchAssistantRoute(app),
+            new SearchPatientsRoute(app),
+            new SearchNutritionalPlansRoute(app)
         ]
     }
 

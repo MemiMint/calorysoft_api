@@ -2,6 +2,7 @@ import { CreateNutritionalPlan } from "./create";
 import { DeleteNutritionalPlan } from "./delete";
 import { GetNutritionalPlan } from "./get";
 import { GetNutritionalPlans } from "./nutritional-plans";
+import { SearchNutritionalPlans } from "./search";
 import { UpdateNutritionalPlan } from "./update";
 
 export class NutritionalPlanService {
@@ -10,6 +11,7 @@ export class NutritionalPlanService {
     public getNutritionalPlan: GetNutritionalPlan;
     public getNutritionalPlans: GetNutritionalPlans;
     public updateNutritionalPlan: UpdateNutritionalPlan;
+    public searchNutritionalPlan: SearchNutritionalPlans;
 
     constructor() {
         this.createNutritionalPlan = new CreateNutritionalPlan();
@@ -17,5 +19,6 @@ export class NutritionalPlanService {
         this.getNutritionalPlan = new GetNutritionalPlan();
         this.getNutritionalPlans = new GetNutritionalPlans()
         this.updateNutritionalPlan = new UpdateNutritionalPlan();
+        this.searchNutritionalPlan = new SearchNutritionalPlans();
     }
 }

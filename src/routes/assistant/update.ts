@@ -11,6 +11,6 @@ export class UpdateAssistantRoute {
     }
 
     public Init() {
-        this._app.put("/assistant/:id", this.controller.Exec);
+        this._app.put("/assistant/update/:uid", this.controller.Exec);
     }
 }

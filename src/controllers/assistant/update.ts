@@ -26,7 +26,7 @@ export class UpdateAssistantController implements IController<{ message: string,
 
             return res.status(StatusCodes.OK)
             .json({
-                message: "El asistente ha sido registrado",
+                message: "El asistente ha sido actualizado",
                 assistant: newAssistant
             })
         } catch (error) {

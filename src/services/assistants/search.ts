@@ -1,20 +1,20 @@
 import { User } from "../../types/models/user";
 import { UserModel } from "../../model/User";
 
-export class GetAssistant {
-    public async assistant(uid: string): Promise<User> {
+export class SearchAssistannt {
+    public async search(cid: string): Promise<User[]> {
         try {
-            const user: User = await UserModel.findOne({
+            const users: User[] = await UserModel.findAll({
                 where: {
-                    uuid: uid
+                    cid: cid
                 }
             });
 
-            return user;
+            return users;
         } catch (error) {
             console.error("[Service Error]: ", error);
 
-            return null
+            return [];
         }
     }
 }

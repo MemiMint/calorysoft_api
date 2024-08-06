@@ -14,8 +14,9 @@ export class UpdateAssistant {
             assistant.lastname = data.lastname;
             assistant.cid = data.cid;
             assistant.username = data.username;
-            assistant.password = data.password;
             assistant.phonenumber = data.phonenumber;
+
+            await assistant.save();
 
             return assistant;
         } catch (error) {
